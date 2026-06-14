@@ -1,49 +1,119 @@
-import { OrbitControls } from "three/examples/jsm/Addons.js";
+import { PointerLockControls, ThreeMFLoader } from "three/examples/jsm/Addons.js";
 import Experience from "./Experience";
 import type Sizes from './Utils/Sizes.ts'
 import * as THREE from 'three'
-import { instance } from "three/tsl";
+import Time from './Utils/Time.ts'
 
 export default class Camera {
   experience: Experience
   sizes: Sizes
+  time: Time
   scene: THREE.Scene
   canvas: HTMLCanvasElement
 
   instance!: THREE.PerspectiveCamera
-  controls!: OrbitControls
+  controls!: PointerLockControls
+
+  // 移动状态
+  moveForward = false
+  moveBackward = false
+  moveLeft = false
+  moveRight = false
+
+  velocity = new THREE.Vector3()
+  direction = new THREE.Vector3()
+  speed = 2
+
+  prevTime = performance.now()
+
+  // 键盘事件引用(用于销毁时移除)
+  private _onKeyDown!: (e: KeyboardEvent) => void
+  private _onKeyUp!: (e: KeyboardEvent) => void
 
   constructor(experience: Experience){
     this.experience = experience
     this.sizes = experience.sizes
+    this.time = experience.time
     this.scene = experience.scene
     this.canvas = experience.canvas
 
     // console.log(this.experience.sizes.width)
     this.setInstance()
-    this.setOrbitControls()
+    this.setPointerLockControls()
+    this.setKeyboard()
 
     this.sizes.on('resize', () => {
       this.resize()
     })
-    this.instance.position.set(-21, 35, 0)
-    this.instance.lookAt(20, 0, -10)
-    this.scene.add(this.instance)
   }
 
   setInstance(){
     this.instance = new THREE.PerspectiveCamera(
-      35,
+      75,
       this.sizes.width / this.sizes.height,
       0.1,
       1000
     )
+
+    // 图书馆附近
+    this.instance.position.set(0, 4, 0)
+    this.scene.add(this.instance)
   }
 
-  setOrbitControls(){
-    this.controls = new OrbitControls(this.instance, this.canvas)
-    this.controls.enableDamping = true
-    this.controls.target.set(-21, 0, -10)
+  setPointerLockControls(){
+    this.controls = new PointerLockControls(this.instance, document.body)
+    
+    // 
+    this.canvas.addEventListener('click', () => {
+      this.controls.lock()
+    })
+
+    // 锁定/解除事件
+    this.controls.addEventListener('lock', () => {
+      console.log('Point Locked')
+    })
+    this.controls.addEventListener('unlock', () => {
+      console.log('Pointer Unlocked')
+    })
+  }
+
+  setKeyboard(){
+    this._onKeyDown = (event: KeyboardEvent) => {
+      switch(event.code)
+      {
+        case 'KeyW':
+          this.moveForward = true
+          break
+        case 'KeyS':
+          this.moveBackward = true
+          break
+        case 'KeyA':
+          this.moveLeft = true
+          break
+        case 'KeyD':
+          this.moveRight = true
+          break
+      }
+    }
+    this._onKeyUp = (event: KeyboardEvent) => {
+      switch(event.code)
+      {
+        case 'KeyW':
+          this.moveForward = false 
+          break
+        case 'KeyS':
+          this.moveBackward = false
+          break
+        case 'KeyA':
+          this.moveLeft = false
+          break
+        case 'KeyD':
+          this.moveRight = false
+          break
+      }      
+    }
+    window.addEventListener('keydown', this._onKeyDown)
+    window.addEventListener('keyup', this._onKeyUp)
   }
 
   resize(){
@@ -52,6 +122,19 @@ export default class Camera {
   }
 
   update(){
-    this.controls.update()
+    if(!this.controls.isLocked) return
+
+    const deltaTime = this.time.delta / 1000
+    const moveDistance = this.speed * deltaTime
+
+    if(this.moveForward) this.controls.moveForward(moveDistance)
+    if(this.moveBackward) this.controls.moveForward(-moveDistance)
+    if(this.moveLeft) this.controls.moveRight(-moveDistance)
+    if(this.moveRight) this.controls.moveRight(moveDistance)
+  }
+
+  dispose(){
+    window.removeEventListener('keydown', this._onKeyDown)
+    window.removeEventListener('keyup', this._onKeyUp)
   }
 }

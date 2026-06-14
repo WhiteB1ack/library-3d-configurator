@@ -33,7 +33,12 @@ export default class ModelSet {
       table_4: (resources.items.table_4 as GLTF).scene,
       left_up_wall: (resources.items.left_up_wall as GLTF).scene,
       table_5: (resources.items.table_5 as GLTF).scene,
-      chair_1: (resources.items.chair_1 as GLTF).scene
+      chair_1: (resources.items.chair_1 as GLTF).scene,
+      sofa_3: (resources.items.sofa_3 as GLTF).scene,
+      chair_2: (resources.items.chair_2 as GLTF).scene,
+      table_6: (resources.items.table_6 as GLTF).scene,
+      chair_3: (resources.items.chair_3 as GLTF).scene, 
+      chair_4: (resources.items.chair_4 as GLTF).scene
     }
   }
 }

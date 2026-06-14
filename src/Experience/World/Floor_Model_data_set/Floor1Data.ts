@@ -197,5 +197,27 @@ export default
 { type: 'table_5', position: [-20.3, 3, -4] },    { type: 'chair_1', position: [-20.9, 3, -4], rotationY: Math.PI  },
 { type: 'table_5', position: [-20.3, 3, -2.5] },  { type: 'chair_1', position: [-20.9, 3, -2.5], rotationY: Math.PI  },
 { type: 'table_5', position: [-20.3, 3, -1] },    { type: 'chair_1', position: [-20.9, 3, -1], rotationY: Math.PI  },
+
 //{ type: 'chair_metal', position: [-10.3, 3, -12.3] }, 
+{ type: 'sofa_3', position: [-23.45, 3, -3.3], rotationY: Math.PI },  { type: 'sofa_3', position: [-26, 3, -3.3], rotationY: -Math.PI/2 }, 
+{ type: 'sofa_3', position: [-22.25, 3, -0.6] },   { type: 'sofa_3', position: [-26, 3, 1.25], rotationY: -Math.PI/2 },
+{ type: 'sofa_3', position: [-23.8, 3, 1.3], rotationY: -Math.PI/2 }, { type: 'sofa_3', position: [-24, 3, 4.4], rotationY: -Math.PI/2 },
+{ type: 'sofa_3', position: [-25.8, 3, 2.7], rotationY: -Math.PI/2 },
+
+{ type: 'table_5', position: [-25.3, 3, -3.65] , scaleY: 0.7}, { type: 'table_5', position: [-25.3, 3, -3] , scaleY: 0.7},
+{ type: 'table_5', position: [-23.5, 3, -2.65], scaleY: 0.7 }, { type: 'table_5', position: [-22.2, 3, -1.3], scaleY: 0.7 },
+
+{ type: 'table_6', position: [-20.3, 3, 1] },  { type: 'chair_4', position: [-20.9, 3, 1] , rotationY: Math.PI/2},
+{ type: 'chair_4', position: [-26, 3, -4.2] , rotationY: Math.PI/2},  
+
+{ type: 'chair_2', position: [-20.3, 3, 2.75] }, { type: 'chair_4', position: [-20.9, 3, 2.75] , rotationY: Math.PI/2},
+{ type: 'table_6', position: [-20.3, 3, 4.5] },   { type: 'chair_4', position: [-20.9, 3, 4.5] , rotationY: Math.PI/2},  
+{ type: 'table_6', position: [-23.2, 3, 1.7] },  { type: 'chair_3', position: [-23, 3, 1] , rotationY: Math.PI/4},  
+{ type: 'table_6', position: [-25.3, 3, 1.7] }, { type: 'table_5', position: [-25.3, 3, 1] , scaleY: 0.7},
+
+{ type: 'table_6', position: [-25.3, 3, -0.5] }, { type: 'chair_4', position: [-25.9, 3, -0.5] , rotationY: Math.PI/2},  
+{ type: 'table_6', position: [-25.3, 3, -1.6] }, { type: 'chair_4', position: [-25.9, 3, -1.6] , rotationY: Math.PI/2},  
+
+{ type: 'table_3', position: [-25, 3, 2.7] , rotationY: Math.PI/2, scaleX: 0.7}, 
+{ type: 'table_3', position: [-23.2, 3, 4.3] , rotationY: Math.PI/2, scaleX: 0.7}, 
 ]

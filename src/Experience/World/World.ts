@@ -48,6 +48,9 @@ export default class World {
           if(item.scaleX){
             model.scale.x *= item.scaleX
           }
+          if(item.scaleY){
+            model.scale.y *= item.scaleY
+          }
           if(item.mirroX){
             model.scale.set(-1, 1, 1)
           }
