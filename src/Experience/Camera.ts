@@ -22,7 +22,7 @@ export default class Camera {
 
   velocity = new THREE.Vector3()
   direction = new THREE.Vector3()
-  speed = 2
+  speed = 5
 
   prevTime = performance.now()
 
@@ -56,7 +56,7 @@ export default class Camera {
     )
 
     // 图书馆附近
-    this.instance.position.set(0, 4, 0)
+    this.instance.position.set(0, 11, 0)
     this.scene.add(this.instance)
   }
 

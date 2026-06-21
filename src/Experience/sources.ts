@@ -143,5 +143,33 @@ export default [
     name: 'chair_4',
     type: 'gltfModel',
     path: '/model/chair_4.glb'    
-  }
+  },
+
+  // Floor2
+  {
+    name: 'floor_2',
+    type: 'gltfModel',
+    path: '/model/floor_2.glb'
+  },
+
+  {
+    name: 'table_7',
+    type: 'gltfModel',
+    path: '/model/table_7.glb'
+  },
+  {
+    name: 'table_8',
+    type: 'gltfModel',
+    path: '/model/table_8.glb'
+  },
+  {
+    name: 'table_9',
+    type: 'gltfModel',
+    path: '/model/table_9.glb'
+  },    
+  {
+    name: 'bookshelf_1',
+    type: 'gltfModel',
+    path: '/model/bookshelf_1.glb'
+  },   
 ] as const

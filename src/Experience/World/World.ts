@@ -5,6 +5,11 @@ import type Resources from '../Utils/Resources'
 import Floor from './Flooor'
 
 import Floor1Data from './Floor_Model_data_set/Floor1Data'
+import Floor2Data from './Floor_Model_data_set/Floor2Data'
+import Floor3Data from './Floor_Model_data_set/Floor3Data'
+import Floor4Data from './Floor_Model_data_set/Floor4Data'
+import Floor5Data from './Floor_Model_data_set/Floor5Data'
+
 import ModelSet from './ModelSet'
 import ModelManager from './ModelManager'
 
@@ -67,6 +72,59 @@ export default class World {
           )
         }
       } )
+
+      Floor2Data.forEach( item => {
+        const model = this.modelManager.create(item.type)
+        if(model){
+          model.position.set(
+            item.position[0]!,
+            item.position[1]!,
+            item.position[2]!
+          )
+          console.log('OOOKKKKKK')
+          console.log(model.position)
+          this.scene.add(model)
+        }
+      } )
+      Floor3Data.forEach( item => {
+        const model = this.modelManager.create(item.type)
+        if(model){
+          model.position.set(
+            item.position[0]!,
+            item.position[1]!,
+            item.position[2]!
+          )
+          console.log('OOOKKKKKK')
+          console.log(model.position)
+          this.scene.add(model)
+        }
+      } )
+      Floor4Data.forEach( item => {
+        const model = this.modelManager.create(item.type)
+        if(model){
+          model.position.set(
+            item.position[0]!,
+            item.position[1]!,
+            item.position[2]!
+          )
+          console.log('OOOKKKKKK')
+          console.log(model.position)
+          this.scene.add(model)
+        }
+      } )
+      Floor5Data.forEach( item => {
+        const model = this.modelManager.create(item.type)
+        if(model){
+          model.position.set(
+            item.position[0]!,
+            item.position[1]!,
+            item.position[2]!
+          )
+          console.log('OOOKKKKKK')
+          console.log(model.position)
+          this.scene.add(model)
+        }
+      } )                  
     })
   }
 }
