@@ -21,7 +21,7 @@ export default [
   {type: 'table', position: [-4.0285, 9.5319, -6.185]},
   {type: 'table', position: [-3.895, 9.5, -3.5583]},
   {type: 'table', position: [-4.0285, 9.5319, -8.6766]},
-  {type: 'floor_2', position: [0, 9.5, -10]},
+//  {type: 'floor_2', position: [0, 9.5, -10]},
   {type: 'table_7', position: [8.4802, 9.5, -10.0082]},
   {type: 'table_7', position: [8.4802, 9.5, -5.0189]},
   {type: 'table_7', position: [26.4597, 9.5, -34.3796]},

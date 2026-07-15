@@ -1,6 +1,7 @@
 // Pillar
 export default 
 [
+  {type: 'shell', position: [0, 0, 0 ]},
 // pillar  
   {type: 'pillar' , position: [7.5, 0, -1]},
   {type: 'pillar', position: [-7.5, 0, -1]},
@@ -114,20 +115,31 @@ export default
 
 // sofa_1
 // 一层左区
-{ type: 'sofa_1', position: [-8,   0, -1.5], rotationY: Math.PI/2  }, { type: 'sofa_1', position: [-9.5,   0, -1.4], rotationY: -Math.PI/2 },
-{ type: 'sofa_1', position: [-8, 0, -1  ], rotationY: Math.PI/2  }, { type: 'sofa_1', position: [-12, 0, -0.7], rotationY: -Math.PI/2 },
-{ type: 'sofa_1', position: [-13,  0, -0.5], rotationY: Math.PI/2  }, { type: 'sofa_1', position: [-12,  0,  0  ], rotationY: -Math.PI/2 },
-{ type: 'sofa_1', position: [-12.8,  0,  0.2  ], rotationY: Math.PI/2  }, { type: 'sofa_1', position: [-17,  0,  0.5], rotationY: -Math.PI/2 },
-{ type: 'sofa_1', position: [-16,  0,  1  ], rotationY: Math.PI/2  }, { type: 'sofa_1', position: [-17.8,  0,  1  ], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [-9.221, 0, -1.5], rotationY: Math.PI/2  },
+{ type: 'sofa_1', position: [-10.721, 0, -1.4], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [-11.721, 0, -1], rotationY: Math.PI/2  },
+{ type: 'sofa_1', position: [-13.221, 0, -0.7], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [-14.221, 0, -0.5], rotationY: Math.PI/2  },
+{ type: 'sofa_1', position: [-15.721, 0, 0], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [-16.521, 0, 0.2], rotationY: Math.PI/2  },
+{ type: 'sofa_1', position: [-18.221, 0, 0.5], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [-19.721, 0, 1], rotationY: Math.PI/2  },
+{ type: 'sofa_1', position: [-21.521, 0, 1], rotationY: -Math.PI/2 },
 
 // 一层右区
-{ type: 'sofa_1', position: [ 7,   0, -1.5], rotationY: -Math.PI/2 }, { type: 'sofa_1', position: [ 9.5, 0, -1.5], rotationY: Math.PI/2  },
-{ type: 'sofa_1', position: [ 8.25, 0, -0.5  ], rotationY: 0          }, { type: 'sofa_1', position: [ 8.25, 0, -2.5  ], rotationY: Math.PI    },
-{ type: 'sofa_1', position: [13,   0, -1.3], rotationY: -Math.PI/2 }, { type: 'sofa_1', position: [14.5,   0, -1.2], rotationY: Math.PI/2  },
-{ type: 'sofa_1', position: [13, 0, -1  ], rotationY: -Math.PI/2 }, { type: 'sofa_1', position: [14.5, 0, -0.6  ], rotationY: Math.PI/2  },
-{ type: 'sofa_1', position: [18, 0, -0.5], rotationY: -Math.PI/2 }, { type: 'sofa_1', position: [10.5, 0, -11 ], rotationY: -Math.PI/2 },
-{ type: 'sofa_1', position: [12,   0, -11 ], rotationY: Math.PI/2  }, { type: 'sofa_1', position: [13,   0, -11 ], rotationY: -Math.PI/2 },
-{ type: 'sofa_1', position: [14.5, 0, -11 ], rotationY: Math.PI/2  },
+{ type: 'sofa_1', position: [10.711, 0, -1.5], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [13.211, 0, -1.5], rotationY: Math.PI/2  },
+{ type: 'sofa_1', position: [11.961, 0, -0.5], rotationY: 0          },
+{ type: 'sofa_1', position: [11.961, 0, -2.5], rotationY: Math.PI    },
+{ type: 'sofa_1', position: [14.211, 0, -1.3], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [15.711, 0, -1.2], rotationY: Math.PI/2  },
+{ type: 'sofa_1', position: [16.711, 0, -1], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [18.211, 0, -0.6], rotationY: Math.PI/2  },
+{ type: 'sofa_1', position: [19.211, 0, -0.5], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [14.211, 0, -11], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [15.711, 0, -11], rotationY: Math.PI/2  },
+{ type: 'sofa_1', position: [16.711, 0, -11], rotationY: -Math.PI/2 },
+{ type: 'sofa_1', position: [18.211, 0, -11], rotationY: Math.PI/2  },
 
 // sofa_2
 { type: 'sofa_2', position: [-12.5, 0, -13], rotationY: 0 }, { type: 'sofa_2', position: [-14, 0, -13], rotationY: Math.PI },

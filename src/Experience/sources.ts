@@ -172,4 +172,14 @@ export default [
     type: 'gltfModel',
     path: '/model/bookshelf_1.glb'
   },   
+  {
+    name: 'table_10',
+    type: 'gltfModel',
+    path: '/model/table_10.glb'
+  },
+  {
+    name: 'shell',
+    type: 'gltfModel',
+    path: '/model/shell.glb'
+  }
 ] as const

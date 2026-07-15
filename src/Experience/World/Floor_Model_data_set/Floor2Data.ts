@@ -1,6 +1,6 @@
 export default [
   // 基本墙体
-  { type: 'floor_2', position: [0, 6, -10] },
+//  { type: 'floor_2', position: [0, 6, -10] },
 
   //
   { type: 'table_8', position: [-26.6732, 6.0000, -6.6361]},

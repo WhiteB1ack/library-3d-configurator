@@ -45,6 +45,8 @@ export default class ModelSet {
       bookshelf_1:(resources.items.bookshelf_1 as GLTF).scene,
       table_8: (resources.items.table_8 as GLTF).scene,
       table_9: (resources.items.table_9 as GLTF).scene,
+      table_10: (resources.items.table_10 as GLTF).scene,
+      shell: (resources.items.shell as GLTF).scene
     }
   }
 }
