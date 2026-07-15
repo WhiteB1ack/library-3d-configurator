@@ -4,11 +4,14 @@ import Environment from './Environment'
 import type Resources from '../Utils/Resources'
 import Floor from './Flooor'
 
+// import BaseBone
+import BaseBoneData from './Floor_Model_data_set/BaseBoneData'
 import Floor1Data from './Floor_Model_data_set/Floor1Data'
 import Floor2Data from './Floor_Model_data_set/Floor2Data'
 import Floor3Data from './Floor_Model_data_set/Floor3Data'
 import Floor4Data from './Floor_Model_data_set/Floor4Data'
 import Floor5Data from './Floor_Model_data_set/Floor5Data'
+import Floor6Data from './Floor_Model_data_set/Floor6Data'
 
 import ModelSet from './ModelSet'
 import ModelManager from './ModelManager'
@@ -41,6 +44,18 @@ export default class World {
 
       this.modelSet = new ModelSet(this.resources)
       this.modelManager = new ModelManager(this.modelSet)
+  
+      BaseBoneData.forEach( item => {
+        const model = this.modelManager.create(item.type)
+        if(model){
+          model.position.set(
+            item.position[0]!,
+            item.position[1]!,
+            item.position[2]!
+          )
+          this.scene.add(model)
+        }
+      } )      
 
       Floor1Data.forEach( item => {
         const model = this.modelManager.create(item.type)
@@ -50,26 +65,8 @@ export default class World {
             item.position[1]!,
             item.position[2]!
           )
-          if(item.scaleX){
-            model.scale.x *= item.scaleX
-          }
-          if(item.scaleY){
-            model.scale.y *= item.scaleY
-          }
-          if(item.mirroX){
-            model.scale.set(-1, 1, 1)
-          }
 
-          if(item.rotationY){
-            model.rotation.y = item.rotationY
-          }
           this.scene.add(model)
-
-          console.log(
-            item.type,
-            model.position,
-            model
-          )
         }
       } )
 
@@ -81,8 +78,6 @@ export default class World {
             item.position[1]!,
             item.position[2]!
           )
-          console.log('OOOKKKKKK')
-          console.log(model.position)
           this.scene.add(model)
         }
       } )
@@ -94,8 +89,6 @@ export default class World {
             item.position[1]!,
             item.position[2]!
           )
-          console.log('OOOKKKKKK')
-          console.log(model.position)
           this.scene.add(model)
         }
       } )
@@ -107,8 +100,6 @@ export default class World {
             item.position[1]!,
             item.position[2]!
           )
-          console.log('OOOKKKKKK')
-          console.log(model.position)
           this.scene.add(model)
         }
       } )
@@ -120,11 +111,20 @@ export default class World {
             item.position[1]!,
             item.position[2]!
           )
-          console.log('OOOKKKKKK')
-          console.log(model.position)
           this.scene.add(model)
         }
-      } )                  
+      } )
+      Floor6Data.forEach( item => {
+        const model = this.modelManager.create(item.type)
+        if(model){
+          model.position.set(
+            item.position[0]!,
+            item.position[1]!,
+            item.position[2]!
+          )
+          this.scene.add(model)
+        }
+      } )
     })
   }
 }

@@ -15,12 +15,5 @@ export default class ModelManager
     if(type){
       return this.modelSet.models[type]?.clone()
     }
-    // switch(type){
-    //   case 'pillar':
-    //     return this.modelSet.models[type]?.clone()
-    //   default:
-    //     console.warn(`Unknow model: ${type}`)
-    //     return new THREE.Group()
-    // }
   }
 }
