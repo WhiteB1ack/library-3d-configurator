@@ -1,12 +1,12 @@
 export default [
 
   // table_1
-  { type: 'table_1', position: [6.5227, 13.0319, -6.185] },
-  { type: 'table_1', position: [6.6562, 13, -3.5583] },
-  { type: 'table_1', position: [6.5227, 13.0319, -8.6766] },
-  { type: 'table_1', position: [-6.5924, 13.0319, -6.185] },
-  { type: 'table_1', position: [-6.4589, 13, -3.5583] },
-  { type: 'table_1', position: [-6.5924, 13.0319, -8.6766] },
+  { type: 'table_1', position: [6.523, 13.032, -6.185], rotationY: Math.PI / 2 },
+  { type: 'table_1', position: [6.656, 13.000, -3.558], rotationY: Math.PI / 2 },
+  { type: 'table_1', position: [6.523, 13.032, -8.677], rotationY: Math.PI / 2 },
+  { type: 'table_1', position: [-6.592, 13.032, -6.185], rotationY: Math.PI / 2 },
+  { type: 'table_1', position: [-6.459, 13.000, -3.558], rotationY: Math.PI / 2 },
+  { type: 'table_1', position: [-6.592, 13.032, -8.677], rotationY: Math.PI / 2 },
 
   // table_7
   { type: 'table_7', position: [9.6912, 13, -10.0082] },
@@ -113,20 +113,20 @@ export default [
   { type: 'sofa_1', position: [6.7083, 13, -2.5945] },
   { type: 'sofa_1', position: [6.7083, 13, -5.4597] },
   { type: 'sofa_1', position: [6.7083, 13, -7.8014] },
-  { type: 'sofa_1', position: [6.7083, 13, -4.2701] },
-  { type: 'sofa_1', position: [6.7083, 13, -6.8588] },
-  { type: 'sofa_1', position: [6.7083, 13, -9.3523] },
+  { type: 'sofa_1', position: [6.7083, 13, -4.2701] , rotationY: Math.PI},
+  { type: 'sofa_1', position: [6.7083, 13, -6.8588] , rotationY: Math.PI},
+  { type: 'sofa_1', position: [6.7083, 13, -9.3523] , rotationY: Math.PI} ,
   { type: 'sofa_1', position: [-6.4068, 13, -2.5945] },
   { type: 'sofa_1', position: [-6.4068, 13, -5.4597] },
   { type: 'sofa_1', position: [-6.4068, 13, -7.8014] },
-  { type: 'sofa_1', position: [-6.4068, 13, -4.2701] },
-  { type: 'sofa_1', position: [-6.4068, 13, -6.8588] },
-  { type: 'sofa_1', position: [-6.4068, 13, -9.3523] },
+  { type: 'sofa_1', position: [-6.4068, 13, -4.2701]  , rotationY: Math.PI},
+  { type: 'sofa_1', position: [-6.4068, 13, -6.8588]  , rotationY: Math.PI},
+  { type: 'sofa_1', position: [-6.4068, 13, -9.3523]  , rotationY: Math.PI},
 
   // sofa_4
   { type: 'sofa_4', position: [-8.7345, 13, -4.9671] },
-  { type: 'sofa_4', position: [-8.7345, 13, -4.9671] },
-  { type: 'sofa_4', position: [-8.7345, 13, -10.0104] },
+  { type: 'sofa_4', position: [-8.734, 13.000, -4.967], rotationY: Math.PI },
+  { type: 'sofa_4', position: [-8.734, 13.000, -10.010], rotationY: Math.PI },
   { type: 'sofa_4', position: [-8.7345, 13, -10.0104] },
 
   // bookshelf_3

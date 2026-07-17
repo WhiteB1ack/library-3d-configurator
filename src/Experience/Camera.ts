@@ -56,7 +56,7 @@ export default class Camera {
     )
 
     // 图书馆附近
-    this.instance.position.set(0, 10, 0)
+    this.instance.position.set(0, 20, 0)
     this.scene.add(this.instance)
   }
 

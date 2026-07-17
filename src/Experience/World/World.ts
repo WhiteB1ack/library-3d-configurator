@@ -2,7 +2,6 @@ import * as THREE from 'three'
 import Experience from '../Experience'
 import Environment from './Environment'
 import type Resources from '../Utils/Resources'
-import Floor from './Flooor'
 
 // import BaseBone
 import BaseBoneData from './Floor_Model_data_set/BaseBoneData'
@@ -30,8 +29,6 @@ export default class World {
   modelSet!: ModelSet
   modelManager!: ModelManager
 
-  floor!: Floor
-
   constructor(experience: Experience){
     this.experience = experience
     this.scene = experience.scene
@@ -39,7 +36,6 @@ export default class World {
 
     this.resources.on('ready', () => {
       // Setup
-      this.floor = new Floor(this.experience)
       this.environment = new Environment(this.experience)
 
       this.modelSet = new ModelSet(this.resources)
@@ -63,8 +59,12 @@ export default class World {
           model.position.set(
             item.position[0]!,
             item.position[1]!,
-            item.position[2]!
+            item.position[2]!            
           )
+
+          if(item.rotationY){
+            model.rotation.y = item.rotationY
+          }
 
           this.scene.add(model)
         }
@@ -78,6 +78,9 @@ export default class World {
             item.position[1]!,
             item.position[2]!
           )
+          // if(item.rotationY){
+          //   model.rotation.y = item.rotationY
+          // }          
           this.scene.add(model)
         }
       } )
@@ -89,6 +92,9 @@ export default class World {
             item.position[1]!,
             item.position[2]!
           )
+          if(item.rotationY){
+            model.rotation.y = item.rotationY
+          }
           this.scene.add(model)
         }
       } )
@@ -100,6 +106,9 @@ export default class World {
             item.position[1]!,
             item.position[2]!
           )
+          if(item.rotationY){
+            model.rotation.y = item.rotationY
+          }
           this.scene.add(model)
         }
       } )
@@ -111,6 +120,9 @@ export default class World {
             item.position[1]!,
             item.position[2]!
           )
+          if(item.rotationY){
+            model.rotation.y = item.rotationY
+          }
           this.scene.add(model)
         }
       } )
@@ -122,6 +134,9 @@ export default class World {
             item.position[1]!,
             item.position[2]!
           )
+          // if(item.rotationY){
+          //   model.rotation.y = item.rotationY
+          // }
           this.scene.add(model)
         }
       } )

@@ -1,12 +1,12 @@
 export default [
 
   // table_1
-  { type: 'table_1', position: [6.5227, 9.5319, -6.185] },
-  { type: 'table_1', position: [6.6562, 9.5, -3.5583] },
-  { type: 'table_1', position: [6.5227, 9.5319, -8.6766] },
-  { type: 'table_1', position: [-6.5924, 9.5319, -6.185] },
-  { type: 'table_1', position: [-6.4589, 9.5, -3.5583] },
-  { type: 'table_1', position: [-6.5924, 9.5319, -8.6766] },
+  { type: 'table_1', position: [6.523, 9.532, -6.185], rotationY: Math.PI / 2 },
+  { type: 'table_1', position: [6.656, 9.500, -3.558], rotationY: Math.PI / 2 },
+  { type: 'table_1', position: [6.523, 9.532, -8.677], rotationY: Math.PI / 2 },
+  { type: 'table_1', position: [-6.592, 9.532, -6.185], rotationY: Math.PI / 2 },
+  { type: 'table_1', position: [-6.459, 9.500, -3.558], rotationY: Math.PI / 2 },
+  { type: 'table_1', position: [-6.592, 9.532, -8.677], rotationY: Math.PI / 2 },
 
   // table_7
   { type: 'table_7', position: [9.6912, 9.5, -10.0082] },
@@ -113,20 +113,21 @@ export default [
   { type: 'sofa_1', position: [6.7083, 9.5, -2.5945] },
   { type: 'sofa_1', position: [6.7083, 9.5, -5.4597] },
   { type: 'sofa_1', position: [6.7083, 9.5, -7.8014] },
-  { type: 'sofa_1', position: [6.7083, 9.5, -4.2701] },
-  { type: 'sofa_1', position: [6.7083, 9.5, -6.8588] },
-  { type: 'sofa_1', position: [6.7083, 9.5, -9.3523] },
+  { type: 'sofa_1', position: [6.7083, 9.5, -4.2701], rotationY: Math.PI }, //
+  { type: 'sofa_1', position: [6.7083, 9.5, -6.8588], rotationY: Math.PI }, //
+  { type: 'sofa_1', position: [6.7083, 9.5, -9.3523], rotationY: Math.PI }, //
   { type: 'sofa_1', position: [-6.4068, 9.5, -2.5945] },
   { type: 'sofa_1', position: [-6.4068, 9.5, -5.4597] },
   { type: 'sofa_1', position: [-6.4068, 9.5, -7.8014] },
-  { type: 'sofa_1', position: [-6.4068, 9.5, -4.2701] },
-  { type: 'sofa_1', position: [-6.4068, 9.5, -6.8588] },
-  { type: 'sofa_1', position: [-6.4068, 9.5, -9.3523] },
+  { type: 'sofa_1', position: [-6.4068, 9.5, -4.2701], rotationY: Math.PI },///
+  { type: 'sofa_1', position: [-6.4068, 9.5, -6.8588], rotationY: Math.PI },///
+  { type: 'sofa_1', position: [-6.4068, 9.5, -9.3523], rotationY: Math.PI },///
+
 
   // sofa_4
+  { type: 'sofa_4', position: [-8.7345, 9.5, -4.9671], rotationY: Math.PI },
   { type: 'sofa_4', position: [-8.7345, 9.5, -4.9671] },
-  { type: 'sofa_4', position: [-8.7345, 9.5, -4.9671] },
-  { type: 'sofa_4', position: [-8.7345, 9.5, -10.0104] },
+  { type: 'sofa_4', position: [-8.7345, 9.5, -10.0104], rotationY: Math.PI },
   { type: 'sofa_4', position: [-8.7345, 9.5, -10.0104] },
 
   // bookshelf_3
